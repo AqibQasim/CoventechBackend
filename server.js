@@ -27,6 +27,21 @@ app.options('*', cors());
 
 app.use(bodyParser.json());
 
+
+app.get('/' , async(req,res)=>{
+  try {
+    // Fetch all records from MongoDB
+    const formSubmissions = await ContactForm.find();
+
+    // Send the fetched data as the response
+    res.status(200).json({ success: true, data: formSubmissions });
+    
+  } catch (error) {
+    console.error('Error fetching form submissions:', error);
+    res.status(500).json({ success: false, message: 'Internal Server Error' });
+  }
+})
+
 // Route to handle form submissions
 app.post('/', async (req, res) => {
     try {
