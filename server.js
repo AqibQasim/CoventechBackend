@@ -81,7 +81,6 @@ app.post('/', async (req, res) => {
 
   // Start the server
 app.listen(PORT, () => {
-  
     console.log(`Server is running onn http://localhost:${PORT}`);
   });
   //update after modification
