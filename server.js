@@ -8,8 +8,9 @@ const app = express();
 
 const PORT = process.env.PORT || 5000;
 
+
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/CoventechDb', {
+mongoose.connect('mongodb://root:root@3.128.204.48:27017/CoventechDb?authSource=admin', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
