@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB
 mongoose.connect('mongodb://root:root@3.128.204.48:27017/CoventechDb?authSource=admin', {
-  useNewUrlParser: true,
+  useNewUrlParser: true ,
   useUnifiedTopology: true,
 });
 
