@@ -22,7 +22,7 @@ const ContactForm = mongoose.model('ContactForm', {
     message: String,
   });
 
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: 'http://co-ventech.com/' }));
 
 app.options('*', cors());
 
